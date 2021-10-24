@@ -16,6 +16,10 @@ class _myui(Ui_MainWindow):
         self.tmtx1.timeout.connect(self.ReadData)
         self.tmtx1.start(1000)
 
+        self.tmtx2 = QtCore.QTimer()
+        self.tmtx2.timeout.connect(self.ReadData)
+        self.tmtx2.start(500)
+
     
     def state(self):
         self.onsw.clicked.connect(self.write)
